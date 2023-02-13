@@ -11,8 +11,11 @@ import WebKit
 class ViewController: UIViewController {
 
     let network = NetworkService()
+    static let identifier = "SpotifyViewController"
 
     @IBOutlet var webView: WKWebView!
+
+    @IBOutlet weak var showBarButtonItem: UIBarButtonItem?
 
     override func loadView() {
         super.loadView()
@@ -26,13 +29,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let urlRequest = network.getAccessToken()
         webView?.load(urlRequest)
-
-    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Work", style: .done, target: self, action: #selector(presentSpotifyScreen))
     }
 
-    @objc func presentSpotifyScreen() {
-        let vc = SpotifyViewController()
-        present(vc, animated: true)
+
+    @IBAction func showSpotifyVC(_ sender: Any) {
+        performSegue(withIdentifier: Self.identifier, sender: self)
+    }
+
+    @IBSegueAction func makeSpotifyViewController(_ coder: NSCoder, _ sender: Any?, _ segueIdentifier: String?) -> UIViewController? {
+        return SpotifyViewController(coder: coder)
     }
 }
 
@@ -43,5 +48,13 @@ extension ViewController: WKNavigationDelegate {
         let token = url.query?.dropFirst(5) else { return }
 
         UserDefaults.standard.set(token, forKey: "Authorization")
+    }
+
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        guard let isActivate = navigationAction.request.url?.pathComponents.contains("authorize") else { return }
+
+        showBarButtonItem?.isEnabled = !isActivate
+
+        decisionHandler(WKNavigationActionPolicy.allow)
     }
 }

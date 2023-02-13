@@ -19,11 +19,37 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Spotify" id="nNi-C8-hK7"/>
+                    <navigationItem key="navigationItem" title="Spotify" id="nNi-C8-hK7">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Show" id="CyP-p3-dV0">
+                            <connections>
+                                <action selector="showSpotifyVC:" destination="BYZ-38-t0r" id="C8g-IJ-N32"/>
+                                <segue destination="qb7-r6-sTI" kind="show" identifier="SpotifyViewController" destinationCreationSelector="makeSpotifyViewController:sender:segueIdentifier:" id="mhj-13-RzY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="showBarButtonItem" destination="CyP-p3-dV0" id="qP4-Xa-wO9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="3.3482142857142856"/>
+        </scene>
+        <!--Spotify View Controller-->
+        <scene sceneID="In9-WH-BAF">
+            <objects>
+                <viewController id="qb7-r6-sTI" customClass="SpotifyViewController" customModule="Spotify_Playlist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hMm-1h-d3Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="b7P-NS-1Az"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lGp-OL-aj7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRY-21-Ken" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126" y="3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mWj-J1-Thl">
