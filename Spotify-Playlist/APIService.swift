@@ -11,7 +11,7 @@ import Combine
 protocol SpotifyService {}
 
 protocol APIService: SpotifyService {
-    func getSpotifyEntity(for search: String, of type: EntityType)
+    func getSpotifyEntity(with token: String, for search: String, of type: EntityType)
     func getAccessToken() -> URLRequest
 
 }
@@ -65,16 +65,14 @@ extension NetworkService {
         return createURLRequest(from: Self.accountURL, with: queryItems)
     }
 
-    func getSpotifyEntity(for search: String, of type: EntityType)  {
-        var urlRequest = URLRequest(url: Self.baseUrl)
-
+    func getSpotifyEntity(with token: String, for search: String, of type: EntityType)  {
         let queryItems: [URLQueryItem] = [
             URLQueryItem(name: "q", value: search),
             URLQueryItem(name: "type", value: type.rawValue)]
 
-//        urlRequest.url?.append(queryItems: queryItems)
+        var urlRequest = createURLRequest(from: Self.baseUrl, with: queryItems)
 
-//        urlRequest.addValue(token, forHTTPHeaderField: "Authorization")
+        urlRequest.addValue(token, forHTTPHeaderField: "Authorization")
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         let session = URLSession.shared.dataTaskPublisher(for: urlRequest)

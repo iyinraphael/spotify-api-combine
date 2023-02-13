@@ -11,7 +11,8 @@ import WebKit
 class ViewController: UIViewController {
 
     let network = NetworkService()
-    var webView: WKWebView?
+
+    @IBOutlet var webView: WKWebView!
 
     override func loadView() {
         super.loadView()
@@ -25,13 +26,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let urlRequest = network.getAccessToken()
         webView?.load(urlRequest)
+
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Work", style: .done, target: self, action: #selector(presentSpotifyScreen))
+    }
+
+    @objc func presentSpotifyScreen() {
+        let vc = SpotifyViewController()
+        present(vc, animated: true)
     }
 }
 
 extension ViewController: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        guard let url = webView.url else { return }
-        print("authorization url", url)
+        guard let url = webView.url,
+        let token = url.query?.dropFirst(5) else { return }
+
+        UserDefaults.standard.set(token, forKey: "Authorization")
     }
 }

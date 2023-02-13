@@ -16,6 +16,7 @@
 		EB7A0CC02992BE010002252D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A0CBF2992BE010002252D /* APIService.swift */; };
 		EB7A0CC22992DB5D0002252D /* UserAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A0CC12992DB5D0002252D /* UserAccess.swift */; };
 		EB7A0CC4299321EF0002252D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A0CC3299321EF0002252D /* Artist.swift */; };
+		EB7A0CC62994A25C0002252D /* SpotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A0CC52994A25C0002252D /* SpotifyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EB7A0CBF2992BE010002252D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		EB7A0CC12992DB5D0002252D /* UserAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccess.swift; sourceTree = "<group>"; };
 		EB7A0CC3299321EF0002252D /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		EB7A0CC52994A25C0002252D /* SpotifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				EB7A0CBF2992BE010002252D /* APIService.swift */,
 				EB7A0CC12992DB5D0002252D /* UserAccess.swift */,
 				EB7A0CC3299321EF0002252D /* Artist.swift */,
+				EB7A0CC52994A25C0002252D /* SpotifyViewController.swift */,
 			);
 			path = "Spotify-Playlist";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				EB7A0CB02992A9B50002252D /* ViewController.swift in Sources */,
 				EB7A0CAC2992A9B50002252D /* AppDelegate.swift in Sources */,
 				EB7A0CC02992BE010002252D /* APIService.swift in Sources */,
+				EB7A0CC62994A25C0002252D /* SpotifyViewController.swift in Sources */,
 				EB7A0CC22992DB5D0002252D /* UserAccess.swift in Sources */,
 				EB7A0CAE2992A9B50002252D /* SceneDelegate.swift in Sources */,
 			);
