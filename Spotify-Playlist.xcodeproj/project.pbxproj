@@ -17,6 +17,8 @@
 		EB7A0CC22992DB5D0002252D /* UserAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A0CC12992DB5D0002252D /* UserAccess.swift */; };
 		EB7A0CC4299321EF0002252D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A0CC3299321EF0002252D /* Artist.swift */; };
 		EB7A0CC62994A25C0002252D /* SpotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A0CC52994A25C0002252D /* SpotifyViewController.swift */; };
+		EB7A0CC9299AE7E90002252D /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A0CC7299AE7E90002252D /* ItemViewCell.swift */; };
+		EB7A0CCA299AE7E90002252D /* ItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7A0CC8299AE7E90002252D /* ItemViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		EB7A0CC12992DB5D0002252D /* UserAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccess.swift; sourceTree = "<group>"; };
 		EB7A0CC3299321EF0002252D /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		EB7A0CC52994A25C0002252D /* SpotifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyViewController.swift; sourceTree = "<group>"; };
+		EB7A0CC7299AE7E90002252D /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
+		EB7A0CC8299AE7E90002252D /* ItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 		EB7A0CAA2992A9B50002252D /* Spotify-Playlist */ = {
 			isa = PBXGroup;
 			children = (
+				EB7A0CC7299AE7E90002252D /* ItemViewCell.swift */,
+				EB7A0CC8299AE7E90002252D /* ItemViewCell.xib */,
 				EB7A0CAB2992A9B50002252D /* AppDelegate.swift */,
 				EB7A0CAD2992A9B50002252D /* SceneDelegate.swift */,
 				EB7A0CAF2992A9B50002252D /* ViewController.swift */,
@@ -140,6 +146,7 @@
 				EB7A0CB82992A9B80002252D /* LaunchScreen.storyboard in Resources */,
 				EB7A0CB52992A9B80002252D /* Assets.xcassets in Resources */,
 				EB7A0CB32992A9B50002252D /* Main.storyboard in Resources */,
+				EB7A0CCA299AE7E90002252D /* ItemViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +164,7 @@
 				EB7A0CC62994A25C0002252D /* SpotifyViewController.swift in Sources */,
 				EB7A0CC22992DB5D0002252D /* UserAccess.swift in Sources */,
 				EB7A0CAE2992A9B50002252D /* SceneDelegate.swift in Sources */,
+				EB7A0CC9299AE7E90002252D /* ItemViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
